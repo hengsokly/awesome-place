@@ -48,8 +48,8 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  <<: *default
   adapter: postgresql
+  encoding: unicode
   database: awesome-place_production
   username: awesome-place
   password: <%= ENV['AWESOME-PLACE_DATABASE_PASSWORD'] %>
