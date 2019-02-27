@@ -14,7 +14,7 @@ default: &default
   encoding: utf8
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: root
-  password: ''
+  password: devc0der
   socket: /var/run/mysqld/mysqld.sock
 
 development:
@@ -49,6 +49,7 @@ test:
 #
 production:
   <<: *default
+  adapter: postgresql
   database: awesome-place_production
   username: awesome-place
   password: <%= ENV['AWESOME-PLACE_DATABASE_PASSWORD'] %>
